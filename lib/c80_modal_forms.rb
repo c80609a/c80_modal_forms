@@ -1,5 +1,9 @@
 require "c80_modal_forms/version"
 
 module C80ModalForms
-  # Your code goes here...
+  module Rails
+    class Engine < ::Rails::Engine
+
+    end
+  end
 end

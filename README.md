@@ -1,8 +1,6 @@
 # C80ModalForms
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/c80_modal_forms`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Small gem containing single `modal_form.js` file provides basic functionality for using Bootstrap modal forms.
 
 ## Installation
 
@@ -22,7 +20,19 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+NOTE: This gem uses `jQuery` gem and `bootstrap-sass` gem.
+
+Ensure that application's Gemfile contains these lines:
+```ruby
+gem 'jquery-rails'
+gem 'bootstrap-sass'
+```
+
+You will need to add these lines into your `application.js`:
+```js
+//= require bootstrap/modal
+//= require c80_modal_forms
+```
 
 ## Development
 
