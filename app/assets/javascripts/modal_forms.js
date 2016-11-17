@@ -28,11 +28,17 @@
 
         // show error messages in input form-group help-block
         $.each(errors, function(field, messages){
+
             var $input = $('input[name="' + model + '[' + field + ']"]');
             if ($input.length == 0) {
                 $input = $('textarea[name="' + model + '[' + field + ']"]');
             }
-            $input.closest('.form-group').addClass('has-error').find('.help-block').html( messages.join('  ') );
+
+            $input.closest('.form-group')
+                .addClass('has-error')
+                .find('.help-block')
+                //.html( messages.join('  ') );
+                .html( messages[0] );
         });
 
     };
